@@ -3,6 +3,7 @@ The following file describes the measures and dimensions that can be found in th
 
 ## Tidy dataset
 After combining the raw data and cleaning it, fitness tracker measurements are stored in *dfClean* dataframe which consists of the following columns
+*Note that I do not have a clue what majority of these mean so please be gentle if the descriptions do not really make much sense*
 
 Seq | Column | Type | Values | Description
 --- | --- | --- | --- | ---
@@ -75,3 +76,13 @@ Seq | Column | Type | Values | Description
 67	|	FrequencyBodyBodyAccelerometerJerkMagnitude-StandardDeviation	| number	|	Magnitude calculation of Standard Deviation of Frequency domain Body Acceleration Jerk measurement
 68	|	FrequencyBodyBodyGyroscopeMagnitude-StandardDeviation	| number	|	Magnitude calculation of Standard Deviation of Frequency domain Body Gyration measurement
 69	|	FrequencyBodyBodyGyroscopeJerkMagnitude-StandardDeviation	| number	|	Magnitude calculation of Standard Deviation of Frequency domain Body Gyration Jerk measurement
+
+## Summary dataset
+Additional dataframe *dfSummary* is created to store summarized values of above measurements. The output of the data frame can also be found in the file *Tracker Summary.txt*
+
+Seq | Column | Type | Description
+--- | --- | --- | ---
+1 | subject | integer | Identifier of the subject who the measurement belongs to
+2 | activity | character | Type of activity
+3 | variable | factor | One of the measurements described in above table between Seq 4 and 69
+4 | value | numeric | Mean of said measurement
